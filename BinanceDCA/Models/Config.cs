@@ -24,5 +24,6 @@ namespace BinanceDCA.Models
         public string BuyTicker { get; set; }
         public string SellTicker { get; set; }
         public decimal AmountToSell { get; set; }
+        public string Cron { get; set; }
     }
 }

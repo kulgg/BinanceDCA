@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Binance.Net;
+using Binance.Net.Objects;
 using BinanceDCA.Models;
+using CryptoExchange.Net.Authentication;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,8 +26,8 @@ namespace BinanceDCA
             using IServiceScope serviceScope = host.Services.CreateScope();
             IServiceProvider provider = serviceScope.ServiceProvider;
             
-            var app = provider.GetRequiredService<App>();
-            await app.Execute();
+            Log.Logger.Information("Starting");
+            host.Run();
         }
 
         static IHostBuilder CreateDefaultBuilder(Config config)
@@ -33,8 +36,14 @@ namespace BinanceDCA
                 .UseSerilog()
                 .ConfigureServices(services =>
                 {
-                    services.AddSingleton<App>();
                     services.AddSingleton(config);
+                    
+                    var client = new BinanceClient(new BinanceClientOptions(){
+                        ApiCredentials = new ApiCredentials(config.Binance.APIKey, config.Binance.APISecret)
+                    });
+                    services.AddSingleton(client);
+                    
+                    QuartzConfiguration.Setup(services, config);
                 });
         }
     }

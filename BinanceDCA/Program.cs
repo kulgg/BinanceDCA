@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Binance.Net;
+﻿using Binance.Net;
 using Binance.Net.Objects;
 using BinanceDCA.Models;
 using CryptoExchange.Net.Authentication;
@@ -13,7 +11,7 @@ namespace BinanceDCA
 {
     class Program
     {
-        static async Task Main(string[] args)
+        static void Main()
         {
             var configurationRoot = Configuration.Build();
             
@@ -24,7 +22,7 @@ namespace BinanceDCA
             var host = CreateDefaultBuilder(config).Build();
             
             using IServiceScope serviceScope = host.Services.CreateScope();
-            IServiceProvider provider = serviceScope.ServiceProvider;
+            // IServiceProvider provider = serviceScope.ServiceProvider;
             
             Log.Logger.Information("Starting");
             host.Run();

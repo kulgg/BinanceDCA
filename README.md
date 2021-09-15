@@ -28,8 +28,3 @@ The config of the first buy translates to: "Buy 10 USD of Bitcoin every Friday a
 You can add a custom buy frequency for every cryptocurrency you want to DCA into by using the Cron field in the config.
 
 Don't know what Cron expressions are? [Cron Expression Generator](https://www.freeformatter.com/cron-expression-generator-quartz.html) might be useful for generating them.
-
-### Run
-```
-dotnet run
-```

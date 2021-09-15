@@ -30,4 +30,6 @@ You can add a custom buy frequency for every cryptocurrency you want to DCA into
 Don't know what Cron expressions are? [Cron Expression Generator](https://www.freeformatter.com/cron-expression-generator-quartz.html) might be useful for generating them.
 
 ### Run
-`dotnet run`
+```
+dotnet run
+```

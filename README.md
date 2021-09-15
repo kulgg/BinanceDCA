@@ -16,7 +16,7 @@ Download the self-contained .NET App
 
 ### Config
 To use this bot to execute your custom DCA strategy, you only have to:
-1. Add your Binance API Key & Secret to `appsettings.json`
+1. Add your Binance API Key & Secret in `appsettings.json`
 2. Place your desired buys inside the "Buys" list in `appsettings.json`. For example:
 ```
 "Buys": [

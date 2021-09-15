@@ -7,11 +7,10 @@ This bot allows you to automatically DCA (Dollar-cost average) into your preferr
 1. [Generate a new API Key on Binance](https://www.binance.com/en/my/settings/api-management)
 2. Check "Enable Reading" and "Enable Spot & Margin Trading".
 
-### Setup
-[.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) needed
-```
-git clone https://github.com/JlKmn/BinanceDCA.git
-```
+### Download
+Download the self-contained .NET App
+[Windows x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/Winx64.zip)
+[Linux x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/Linx64.zip)
 
 ### Config
 To use this bot to execute your custom DCA strategy, you only have to:

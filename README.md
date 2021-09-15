@@ -10,9 +10,9 @@ This bot allows you to automatically DCA (Dollar-cost average) into your preferr
 ### Download
 Download the self-contained .NET App
 
-[Windows x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/Winx64.zip)
+[Windows x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/winx64.zip)
 
-[Linux x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/Linx64.zip)
+[Linux x64](https://github.com/JlKmn/BinanceDCA/releases/download/v1.0/linx64.zip)
 
 ### Config
 To use this bot to execute your custom DCA strategy, you only have to:
